@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background-color: #FAF9F6;
+    /* font-family: Helvetica, Arial, sans-serif; */
+}
+
+ul {
+    padding-left: 20px;
+    padding: 7px;
+    border-radius: 10px;
+    background-color: #424341;
+    display: flex;
+ }
+
+#searchIcon {
+    border: none;
+    background-color: #747572;
+    border-width: 1 1px;
+    padding: 7px;
+    border-radius: 12px;
+    font-family: "Work Sans", sans-serif;
+    position: absolute;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+#switchTheme {
+    border: none;
+    background-color: #747572;
+    border-width: 1 1px;
+    padding: 7px;
+    border-radius: 12px;
+    font-family: "Work Sans", sans-serif;
+    position: absolute;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+#nikeIcon {
+    padding-left: 20px;
+    padding: 7px;
+    border: none;
+}
+
+#switchTheme:hover, #searchIcon:hover{
+    background-color: #fcf8f7;
+}
+
+svg:hover {
+    fill: #313030;
+}
+
+/* Tables */
+
+.tableContainer {
+    max-width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  /* tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  th {
+    text-align: center;
+  } */
+
+  @media screen and (max-width: 100%) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        border: 1px solid #ccc;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    td:before {
+        position: absolute;
+        left: 8px;
+        width: 45%;
+        padding-right: 8px;
+        white-space: nowrap;
+        content: attr(data-label);
+    }
+  }
