@@ -2,21 +2,21 @@
 
 body {
     font-family: "Noto Sans", sans-serif;
-    background-color: #FAF9F6;
-    /* font-family: Helvetica, Arial, sans-serif; */
+    background-color: #f7f9fc;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 ul {
     padding-left: 20px;
     padding: 7px;
     border-radius: 10px;
-    background-color: #424341;
+    background-color: #00526e;
     display: flex;
- }
+}
 
 #searchIcon {
     border: none;
-    background-color: #747572;
+    background-color: #23789b;
     border-width: 1 1px;
     padding: 7px;
     border-radius: 12px;
@@ -28,7 +28,7 @@ ul {
 
 #switchTheme {
     border: none;
-    background-color: #747572;
+    background-color: #23789b;
     border-width: 1 1px;
     padding: 7px;
     border-radius: 12px;
@@ -44,66 +44,28 @@ ul {
     border: none;
 }
 
-#switchTheme:hover, #searchIcon:hover{
-    background-color: #fcf8f7;
+#switchTheme:hover, #searchIcon:hover {
+    background-color: #cfebfc;
+
+    svg {
+        fill: #344e5c;
+    }
 }
 
-svg:hover {
-    fill: #313030;
+svg {
+    fill: #ffffff;
 }
 
-/* Tables */
-
-.tableContainer {
-    max-width: 90%;
-    margin: 0 auto;
-    overflow-x: auto;
+#switchThemeIcon {
+    animation-name: logoMoving;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    animation-direction: alternate;
 }
 
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  /* tr:nth-child(even) {
-    background-color: #dddddd;
-  }
-
-  th {
-    text-align: center;
-  } */
-
-  @media screen and (max-width: 100%) {
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-    tr {
-        border: 1px solid #ccc;
-    }
-    td {
-        border: none;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        padding-left: 50%;
-    }
-    td:before {
-        position: absolute;
-        left: 8px;
-        width: 45%;
-        padding-right: 8px;
-        white-space: nowrap;
-        content: attr(data-label);
-    }
-  }
+@keyframes logoMoving {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(1turn);}
+}
