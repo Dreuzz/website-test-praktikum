@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    font-family: "Noto Sans", sans-serif;
+    /* font-family: "Noto Sans", sans-serif; */
     background-color: var(--md-sys-color-surface);
     font-family: Helvetica, Arial, sans-serif;
 }
@@ -57,11 +57,45 @@ svg {
     fill: var(--md-sys-color-on-surface);
 }
 
-.nikeSbDunks, .nikePufferJacket, .nikeNoctaFleece {
-    padding: 7px;
-    border-radius: 10px;
-    background-color: var(--md-sys-color-surface-container-high);
-    margin-bottom: 8px;
-    display: flex;
-  }
+    #nikeSbDunks, #nikePufferJacket, #nikeNoctaFleece {
+        padding: 7px;
+        border-radius: 10px;
+        background-color: var(--md-sys-color-surface-container-high);
+        display: inline-flex;
+        height: 500px;
+        width: 30%;
+        margin: 8px;
+        padding: 20px;
+    }
 
+
+    #nikePufferJacketImage {
+        display: block;
+        border: 8px solid #fff;
+        border-radius: 12px;
+        height: 250px;
+        width: auto;
+    }
+    #nikeSbDunksImage {
+        display: flex;
+        border: 8px solid #fff;
+        border-radius: 12px;
+        height: 250px;
+        width: auto;
+    }
+
+    #nikeNoctaFleeceImage {
+        border: 8px solid #fff;
+        border-radius: 12px;
+        height: 250px;
+        width: auto;
+    }
+
+
+    [id*="Title"] {
+        display: block;
+        font-size: 38px;
+        font-family: "Oswald", Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        margin: 8px;
+    }      
