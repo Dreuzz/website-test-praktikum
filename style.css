@@ -2,21 +2,21 @@
 
 body {
     font-family: "Noto Sans", sans-serif;
-    background-color: #f7f9fc;
+    background-color: var(--md-sys-color-surface);
     font-family: Helvetica, Arial, sans-serif;
 }
 
-ul {
+.navBar-buttons {
     padding-left: 20px;
     padding: 7px;
     border-radius: 10px;
-    background-color: #00526e;
+    background-color: var(--md-sys-color-surface-container-highest);
     display: flex;
 }
 
 #searchIcon {
     border: none;
-    background-color: #23789b;
+    background-color: var(--md-sys-color-surface-container-highest);
     border-width: 1 1px;
     padding: 7px;
     border-radius: 12px;
@@ -28,7 +28,7 @@ ul {
 
 #switchTheme {
     border: none;
-    background-color: #23789b;
+    background-color: var(--md-sys-color-surface-container-highest);
     border-width: 1 1px;
     padding: 7px;
     border-radius: 12px;
@@ -39,33 +39,29 @@ ul {
 }
 
 #nikeIcon {
-    padding-left: 20px;
-    padding: 7px;
+    padding-left: 4px;
     border: none;
+    height: 48px;
+    background-color: transparent;
 }
 
 #switchTheme:hover, #searchIcon:hover {
-    background-color: #cfebfc;
+    background-color: var(--md-sys-color-surface-container-high);
 
     svg {
-        fill: #344e5c;
+        fill: var(--md-sys-color-on-surface-variant);
     }
 }
 
 svg {
-    fill: #ffffff;
+    fill: var(--md-sys-color-on-surface);
 }
 
-#switchThemeIcon {
-    animation-name: logoMoving;
-    animation-duration: 2s;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    animation-direction: alternate;
-}
+.nikeSbDunks, .nikePufferJacket, .nikeNoctaFleece {
+    padding: 7px;
+    border-radius: 10px;
+    background-color: var(--md-sys-color-surface-container-high);
+    margin-bottom: 8px;
+    display: flex;
+  }
 
-@keyframes logoMoving {
-    0% {transform: rotate(0);}
-    100% {transform: rotate(1turn);}
-}
