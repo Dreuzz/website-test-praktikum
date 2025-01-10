@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    /* font-family: "Noto Sans", sans-serif; */
     background-color: var(--md-sys-color-surface);
     font-family: Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .navBar-buttons {
@@ -11,11 +12,11 @@ body {
     padding: 7px;
     border-radius: 10px;
     background-color: var(--md-sys-color-surface-container-highest);
-    display: inline-flexbox;
+    display: flexbox;
+    margin: 1rem;
 }
 
 #nikeIcon {
-    padding-left: 4px;
     border: none;
     height: 48px;
     background-color: transparent;
@@ -35,10 +36,10 @@ body {
 
 #switchTheme:hover, #searchIcon:hover {
     background-color: var(--md-sys-color-surface-container-high);
+}
 
-    svg {
-        fill: var(--md-sys-color-on-surface-variant);
-    }
+#switchTheme:hover svg, #searchIcon:hover svg {
+    fill: var(--md-sys-color-on-surface-variant);
 }
 
 svg {
@@ -46,52 +47,70 @@ svg {
 }
 
 .products {
-    display: inline-block;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-    #nikeSbDunks, #nikePufferJacket, #nikeNoctaFleece {
-        padding: 7px;
-        border-radius: 10px;
-        background-color: var(--md-sys-color-surface-container-high);
-        display: inline-block;
-        max-height: min-content;
-        max-width: fit-content;
-        margin: 8px;
-        padding: 20px;
+#nikeSbDunks, #nikePufferJacket, #nikeNoctaFleece {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--md-sys-color-surface-container-high);
+    display: inline-flexbox;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#nikeSbDunksImage, #nikePufferJacketImage, #nikeNoctaFleeceImage {
+    border: none;
+    border-radius: 12px;
+    width: 75%;
+    height: min-content;
+}
+
+[id*="Title"] {
+    font-size: 1.75rem;
+    font-family: fantasy;
+    font-weight: 500;
+    margin: 8px;
+}
+
+@media (max-width: 768px) {
+    .navBar-buttons {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-
-    #nikePufferJacketImage {
-        display: block;
-        border: 8px solid #fff;
-        border-radius: 12px;
-        height: 250px;
-        width: auto;
-    }
-    #nikeSbDunksImage {
-        display: flex;
-        border: 8px solid #fff;
-        border-radius: 12px;
-        height: 250px;
-        width: auto;
+    #nikeIcon {
+        margin-bottom: 2.5px;
     }
 
-    #nikeNoctaFleeceImage {
-        border: 8px solid #fff;
-        border-radius: 12px;
-        height: 250px;
-        width: auto;
+    #switchTheme, #searchIcon {
+        margin-top: 2.5px;
     }
 
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
 
     [id*="Title"] {
-        display: block;
-        font-size: 38px;
-        font-family: "Oswald", Helvetica, Arial, sans-serif;
-        font-weight: 500;
-        margin: 8px;
+        font-size: 1.5rem;
+        width: fit-content;
     }
+}
 
-    p {
-        display: flex;
+@media (max-width: 480px) {
+    [id*="Title"] {
+        font-size: 1.2rem;
     }
+}
