@@ -11,31 +11,7 @@ body {
     padding: 7px;
     border-radius: 10px;
     background-color: var(--md-sys-color-surface-container-highest);
-    display: flex;
-}
-
-#searchIcon {
-    border: none;
-    background-color: var(--md-sys-color-surface-container-highest);
-    border-width: 1 1px;
-    padding: 7px;
-    border-radius: 12px;
-    font-family: "Work Sans", sans-serif;
-    position: absolute;
-    min-width: 48px;
-    min-height: 48px;
-}
-
-#switchTheme {
-    border: none;
-    background-color: var(--md-sys-color-surface-container-highest);
-    border-width: 1 1px;
-    padding: 7px;
-    border-radius: 12px;
-    font-family: "Work Sans", sans-serif;
-    position: absolute;
-    min-width: 48px;
-    min-height: 48px;
+    display: inline-flexbox;
 }
 
 #nikeIcon {
@@ -43,6 +19,18 @@ body {
     border: none;
     height: 48px;
     background-color: transparent;
+}
+
+#switchTheme, #searchIcon {
+    border: none;
+    background-color: var(--md-sys-color-surface-container-highest);
+    border-width: 1 1px;
+    padding: 7px;
+    border-radius: 12px;
+    font-family: "Work Sans", sans-serif;
+    float: right;
+    min-width: 48px;
+    min-height: 48px;
 }
 
 #switchTheme:hover, #searchIcon:hover {
@@ -57,13 +45,17 @@ svg {
     fill: var(--md-sys-color-on-surface);
 }
 
+.products {
+    display: inline-block;
+}
+
     #nikeSbDunks, #nikePufferJacket, #nikeNoctaFleece {
         padding: 7px;
         border-radius: 10px;
         background-color: var(--md-sys-color-surface-container-high);
-        display: inline-flex;
-        height: 500px;
-        width: 30%;
+        display: inline-block;
+        max-height: min-content;
+        max-width: fit-content;
         margin: 8px;
         padding: 20px;
     }
@@ -98,4 +90,8 @@ svg {
         font-family: "Oswald", Helvetica, Arial, sans-serif;
         font-weight: 500;
         margin: 8px;
-    }      
+    }
+
+    p {
+        display: flex;
+    }
